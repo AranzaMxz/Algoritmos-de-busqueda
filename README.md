@@ -8,4 +8,4 @@ Este proyecto contiene tres diferentes algoritmos de búsqueda implementados par
 2. **Búsqueda binaria**
 3. **Árbol de búsqueda binaria (ABB)**
 
-El programa genera un arreglo de tamaño aleatorio (mínimo 50, máximo 100) con elementos igualmente aleatorios. Este arreglo se convierte en una matriz y luego se le pide al usuario buscar un elemento. Finalmente, el programa compara el tiempo y los resultados de cada algoritmo de búsqueda.
+El programa genera una matriz de tamaño n * m, con valores aleatorios (mínimo 50 y máximo 100). Esta  matriz se convierte en una arreglo, posteriormente se le pide al usuario buscar un elemento y finalmente, se muestran los resultados de cada algoritmo de búsqueda, así como una comparación de tiempos entre cada uno.
