@@ -2,19 +2,6 @@ import random
 import math
 import numpy as np
 
-# Ordena los elementos de la matriz vertical y horizontal
-def ordenarMatriz(matriz):
-    # Convierte la matriz en un arreglo
-    matrizArray = np.array(matriz)
-    # Convierte la matriz en una lista
-    lista = np.sort(matrizArray.flatten())
-    # Ordena los elementos de la lista y la regresa a forma de matriz con las dimensiones originales
-    matrizOrd = matriz.reshape(matrizArray.shape)
-
-    
-    print("ordenada:")
-    print(matrizOrd)
-
 # Verifica que sea un valor único en la matriz
 def esUnico(matriz, valor):
     for row in matriz:
@@ -38,13 +25,6 @@ def generarMatriz():
                 if esUnico(matriz,valorAl): # Verificamos que no exista en la matriz
                     matriz[i,j] = valorAl
                     break
-    print("fil ", nFil,"| col ", mCol)
-    print(matriz)
-    ordenarMatriz(matriz)
-
-    
-
-def main():
-    generarMatriz()
-
-main()
+    #print("fil ", nFil,"| col ", mCol)
+    #print(matriz)
+    return matriz
