@@ -59,7 +59,7 @@ class Tree:
     
     def postorder_route(self):
         print("Arbol postorder")
-        self.__postorder4(self.root)
+        self.__postorder(self.root)
         print("")
         
     def search(self, search):

@@ -1,6 +1,6 @@
-from Tree import tree
+from Tree import Tree
 
-arbol_numeros = tree(5)
+arbol_numeros = Tree(5)
 arbol_numeros.add_node(1984)
 arbol_numeros.add_node(60)
 arbol_numeros.add_node(10)
@@ -15,9 +15,9 @@ arbol_numeros.add_node(23)
 arbol_numeros.add_node(18)
 arbol_numeros.add_node(1)
 arbol_numeros.add_node(2013)
-arbol_numeros.preorden_route()
-arbol_numeros.inorden_route()
-arbol_numeros.postorden_route()
+arbol_numeros.preorder_route()
+arbol_numeros.inorder_route()
+arbol_numeros.postorder_route()
 
 busqueda = int(input("Ingresa un número para buscar en el árbol: "))
 n = arbol_numeros.search(busqueda)
