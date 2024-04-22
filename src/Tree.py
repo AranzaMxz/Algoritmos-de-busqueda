@@ -34,8 +34,33 @@ class Tree:
             self.__inorder(node.right)
             print(node.data, end=", ")
             
+    def __search(self, node, search):
+        if node is None:
+            return None
+        if node.data == search:
+            return node
+        if search < node.data:
+            return self.__search(node.left, search)
+        else:
+            return self.__search(node.right, search)
+            
     def add_node(self, data):
         self.__add_nodes(self.root, data)
         
     def inorder_route(self):
+        print("Arbol Inorder")
         self.__inorder(self.root)
+        print("")
+    
+    def preorder_route(self):
+        print("Arbol preorder")
+        self.__preorder(self.root)
+        print("")
+    
+    def postorder_route(self):
+        print("Arbol postorder")
+        self.__postorder4(self.root)
+        print("")
+        
+    def search(self, search):
+        return self.__search(self.root, search)
