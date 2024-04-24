@@ -21,14 +21,14 @@ def ingresarDatos(vector):
     return arbol
     #arbol.inorder_route()
 
-def ABB(vector, numBuscar):
+def ABB(vector, valor_busqueda):
     print("\n----------- ÁRBOL DE BUSQUEDA BINARIA -----------\n")
     print("____ Lista desordenada ____\n", vector)
     
     arbol = ingresarDatos(vector)
     
     start_time = time.time()
-    busquedaABB(arbol, numBuscar)
+    busquedaABB(arbol, valor_busqueda)
     end_time = time.time()
 
     temporizador = end_time - start_time

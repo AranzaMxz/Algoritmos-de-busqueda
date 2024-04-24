@@ -27,7 +27,7 @@ def BB_Lista(array, inicio, fin, valor_busqueda):
     if resultado == -1:
         print("El valor no se encuentra en la lista")
     else:
-        print(f"El valor {valor_busqueda} se encuentra en la posición {resultado + 1 }")
+        print(f"El valor {valor_busqueda} se encuentra en la posición {resultado}")
 
     temporizador = end_time - start_time
     print(f"Tiempo de ejecución: {temporizador:e} segundos")
