@@ -47,4 +47,6 @@ def generarMatriz():
                     break
     #print("fil ", nFil,"| col ", mCol)
     #print(matriz)
-    return matriz
+    array = np.array(matriz) # Convierte la matriz en array
+    array = array.flatten() # Convierte el array en lista
+    return matriz, array
