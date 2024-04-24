@@ -4,17 +4,19 @@ class Tree:
     def __init__(self, data):
         self.root = Node(data)
         
-    def __add_nodes(self, node, data):
+    def __add_nodes(self, node, data, position):
         if data < node.data:
             if node.left is None:
                 node.left = Node(data)
+                node.left.position = position
             else:
-                self.__add_nodes(node.left, data)
-        else:
+                self.__add_nodes(node.left, data, position)
+        elif data > node.data:
             if node.right is None:
                 node.right = Node(data)
+                node.right.position = position
             else:
-                self.__add_nodes(node.right, data)
+                self.__add_nodes(node.right, data, position)
     
     def __inorder(self, node):
         if node is not None:
@@ -44,8 +46,8 @@ class Tree:
         else:
             return self.__search(node.right, search)
             
-    def add_node(self, data):
-        self.__add_nodes(self.root, data)
+    def add_node(self, data, position):
+        self.__add_nodes(self.root, data, position)
         
     def inorder_route(self):
         print("Arbol Inorder")

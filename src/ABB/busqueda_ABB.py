@@ -5,4 +5,4 @@ def busquedaABB(arbol, busqueda):
     if n is None:
         print(f"\nEl valor {busqueda} no existe en la lista")
     else:
-        print(f"\nEl valor {busqueda} sí existe en la lista")
+        print(f"\nEl valor {busqueda} se encuentra en la posición {n.position}")

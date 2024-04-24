@@ -4,19 +4,20 @@ import math
 import numpy as np
 import time
 
-def ingresarDatos(vector):
+def ingresarDatos(lista):
     # Determina el nodo raíz
-    posNodoRaiz = math.ceil(len(vector)/2) - 1 # redondeamos hacia arriba el número
-    nodoRaiz = vector[posNodoRaiz]
+    posNodoRaiz = math.ceil(len(lista)/2) - 1 # redondeamos hacia arriba el número
+    nodoRaiz = lista[posNodoRaiz]
     
-    vector = np.delete(vector,posNodoRaiz)
-    #print("pos: ", posNodoRaiz)
-    #print(nodoRaiz)
+    #lista = np.delete(lista,posNodoRaiz)
+    
     # Agregamos nodo raíz
     arbol = Tree(nodoRaiz)
-    for i in range(len(vector)):
-        x = vector[i]
-        arbol.add_node(x)
+    arbol.root.position = posNodoRaiz
+
+    for i in range(len(lista)):
+        x = lista[i]
+        arbol.add_node(x, i)
 
     return arbol
     #arbol.inorder_route()
