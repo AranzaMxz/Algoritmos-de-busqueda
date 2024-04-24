@@ -50,17 +50,17 @@ class Tree:
         self.__add_nodes(self.root, data, position)
         
     def inorder_route(self):
-        print("Arbol Inorder")
+        print("\nArbol Inorder")
         self.__inorder(self.root)
         print("")
     
     def preorder_route(self):
-        print("Arbol preorder")
+        print("\nArbol preorder")
         self.__preorder(self.root)
         print("")
     
     def postorder_route(self):
-        print("Arbol postorder")
+        print("\nArbol postorder")
         self.__postorder(self.root)
         print("")
         

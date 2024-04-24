@@ -1,4 +1,4 @@
-import time
+import timeit
 from generaMatriz import generarMatriz
 from ordenaDatos import ordenarMatriz
 
@@ -26,10 +26,10 @@ def BB_Matriz(matriz, valor_busqueda):
     num_filas = len(matriz)
     num_columnas = len(matriz[0])
 
-    print(" ___ Matriz ___")
-    start_time = time.time()
+    print("\n     Matriz     ")
+    start_time = timeit.default_timer()
     resultado = busqueda_binaria(matriz, 0, num_filas * num_columnas - 1, valor_busqueda)
-    end_time = time.time()
+    end_time = timeit.default_timer()
 
     if resultado == -1:
         print("El valor no se encuentra en la matriz")

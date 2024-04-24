@@ -1,4 +1,4 @@
-indices = []
+import timeit
 
 def busquedaLineal(matriz, valor_busqueda):
     fil = len(matriz)
@@ -13,9 +13,15 @@ def busquedaLineal(matriz, valor_busqueda):
     return -1        
 
 def BL_matriz(matriz, valor_busqueda):
+    print("\n     Matriz      ")
+    start_time = timeit.default_timer()
     resultado = busquedaLineal(matriz, valor_busqueda)
-    print(" ___ Matriz ___")
+    end_time = timeit.default_timer()
+
     if resultado != -1:
         print(f"El valor {valor_busqueda} se encuentra en la posición: [{resultado[0]}][{resultado[1]}]")
     else:
         print("El valor no se encuentra en la matriz")
+    
+    temporizador = end_time - start_time
+    print(f"Tiempo de ejecución: {temporizador:f} segundos")

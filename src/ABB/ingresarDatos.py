@@ -2,7 +2,7 @@ from ABB.Tree import Tree
 from ABB.busqueda_ABB import busquedaABB
 import math
 import numpy as np
-import time
+import timeit
 
 def ingresarDatos(lista):
     # Determina el nodo raíz
@@ -20,18 +20,22 @@ def ingresarDatos(lista):
         arbol.add_node(x, i)
 
     return arbol
-    #arbol.inorder_route()
 
 def ABB(vector, valor_busqueda):
-    print("\n----------- ÁRBOL DE BUSQUEDA BINARIA -----------\n")
-    print("____ Lista desordenada ____\n", vector)
+    print("________________________________________________________________________")
+    print("\n         ÁRBOL DE BUSQUEDA BINARIA         \n")
+    print("      Lista desordenada     \n", vector)
     
     arbol = ingresarDatos(vector)
     
-    start_time = time.time()
+    start_time = timeit.default_timer()
     busquedaABB(arbol, valor_busqueda)
-    end_time = time.time()
+    end_time = timeit.default_timer()
 
     temporizador = end_time - start_time
     print(f"Tiempo de ejecución: {temporizador:f} segundos")
 
+    arbol.inorder_route()
+    arbol.preorder_route()
+    arbol.postorder_route()
+    

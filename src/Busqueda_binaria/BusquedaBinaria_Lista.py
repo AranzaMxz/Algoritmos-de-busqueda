@@ -1,4 +1,4 @@
-import time
+import timeit
 from generaMatriz import generarMatriz
 from ordenaDatos import ordenarMatriz
 
@@ -18,11 +18,12 @@ def busqueda_binaria(lista, inicio, fin, valor):
     return -1
 
 def BB_Lista(array, inicio, fin, valor_busqueda):
-    print("\n------ BUSQUEDA BINARIA -----\n")
-    print(" ___ Lista ___")
-    start_time = time.time()
+    print("________________________________________________________________________")
+    print("\n         BUSQUEDA BINARIA         \n")
+    print("     Lista     ")
+    start_time = timeit.default_timer()
     resultado = busqueda_binaria(array, inicio, fin, valor_busqueda)
-    end_time = time.time()
+    end_time = timeit.default_timer()
 
     if resultado == -1:
         print("El valor no se encuentra en la lista")
