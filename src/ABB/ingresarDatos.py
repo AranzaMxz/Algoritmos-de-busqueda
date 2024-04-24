@@ -1,14 +1,7 @@
-from Tree import Tree
+from ABB.Tree import Tree
+from ABB.busqueda_ABB import busquedaABB
 import math
 import numpy as np
-
-
-def busquedaABB(arbol, busqueda):
-    n = arbol.search(busqueda)
-    if n is None:
-        print(f"{busqueda} no existe")
-    else:
-        print(f"{busqueda} sí existe")
 
 def ingresarDatos(vector):
     # Determina el nodo raíz
@@ -17,7 +10,7 @@ def ingresarDatos(vector):
     
     vector = np.delete(vector,posNodoRaiz)
     #print("pos: ", posNodoRaiz)
-    print(nodoRaiz)
+    #print(nodoRaiz)
     # Agregamos nodo raíz
     arbol = Tree(nodoRaiz)
     for i in range(len(vector)):

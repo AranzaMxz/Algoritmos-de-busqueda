@@ -1,4 +1,4 @@
-from Node import Node
+from ABB.Node import Node
 
 class Tree:
     def __init__(self, data):
