@@ -33,7 +33,6 @@ def esUnico(matriz, valor):
 
 # Genera la matriz con n elementos
 def generarMatriz():
-    # Genera un número de filas y columnas entre 2-10 (para máximo 100 elementos)
     nFil, mCol = numFilCol()
 
     matriz = np.zeros((nFil, mCol), dtype = int) # Llenamos la matriz de 0
